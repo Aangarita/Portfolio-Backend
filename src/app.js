@@ -1,5 +1,6 @@
 import express, { json } from "express";
 import cors from "cors";
+import projecRoutes from "./routes/v1/projectsRoutes.js"
 
 const app = express();
 
@@ -8,7 +9,7 @@ app.use(json());
 app.use(cors());
 
 //Middlewares de rutas
-// app.use("/api/v1/project", projecRoutes);
+app.use("/api/v1/projects", projecRoutes);
 // app.use("api/v1/contact", contactRoutes);
 
 //Middleware para rutas no encontradas
