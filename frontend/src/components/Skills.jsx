@@ -47,7 +47,7 @@ const Skills = () => {
         position: 'relative',
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Fade in timeout={1000}>
           <Box sx={{ textAlign: 'center', mb: 8 }}>
             <Typography
@@ -68,7 +68,7 @@ const Skills = () => {
           </Box>
         </Fade>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{ width: '100%', maxWidth: 1200, justifyContent: 'center' }}>
           {skillCategories.map((category, index) => (
             <Grid item xs={12} md={4} key={index}>
               <Fade in timeout={1200 + index * 200}>

@@ -120,7 +120,7 @@ const Contact = () => {
         position: 'relative',
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Fade in timeout={1000}>
           <Box sx={{ textAlign: 'center', mb: 8 }}>
             <Typography
@@ -141,7 +141,7 @@ const Contact = () => {
           </Box>
         </Fade>
 
-        <Grid container spacing={6}>
+        <Grid container spacing={6} sx={{ width: '100%', maxWidth: 1200, justifyContent: 'center' }}>
           {/* Información de contacto */}
           <Grid item xs={12} md={6}>
             <Fade in timeout={1200}>

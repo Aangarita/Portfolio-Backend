@@ -46,8 +46,8 @@ const Hero = () => {
         }}
       />
       
-      <Container maxWidth="lg">
-        <Grid container spacing={4} alignItems="center">
+      <Container maxWidth="lg" sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Grid container spacing={4} alignItems="center" sx={{ width: '100%', justifyContent: 'center' }}>
           <Grid item xs={12} md={6}>
             <Fade in timeout={1000}>
               <Box>

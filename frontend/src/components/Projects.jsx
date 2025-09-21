@@ -72,7 +72,7 @@ const Projects = () => {
         position: 'relative',
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Fade in timeout={1000}>
           <Box sx={{ textAlign: 'center', mb: 8 }}>
             <Typography
@@ -93,7 +93,7 @@ const Projects = () => {
           </Box>
         </Fade>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{ width: '100%', maxWidth: 1200, justifyContent: 'center' }}>
           {projects.map((project, index) => (
             <Grid item xs={12} md={6} lg={4} key={project.id}>
               <Fade in timeout={1200 + index * 100}>
