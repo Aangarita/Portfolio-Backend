@@ -1,4 +1,5 @@
 import contactService from "../services/contactService.js";
+import mailService from "../services/mailService.js";
 
 const createContact = async (req, res) => {
   try {
@@ -34,9 +35,11 @@ const createContact = async (req, res) => {
       message: body.message,
     });
 
+    await mailService.sendMail(contact);
+
     res.status(201).json({
       success: true,
-      message: "Contact saved succesfully",
+      message: "Contact saved and email sent successfully",
       data: contact,
     });
   } catch (error) {
